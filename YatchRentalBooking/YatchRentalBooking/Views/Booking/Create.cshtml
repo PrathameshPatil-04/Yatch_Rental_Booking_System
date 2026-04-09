@@ -1,0 +1,42 @@
+﻿
+<h3>Book Boat: @Model.Name</h3>
+
+<form method="post">
+
+    <input type="hidden" name="boatId" value="@Model.Id" />
+
+    <label>Hours:</label>
+    <input type="number" name="hours" required />
+
+    <button class="btn btn-success">Proceed to Pay</button>
+
+</form>
+<form method="post">
+    <input type="hidden" name="BoatId" value="@ViewBag.BoatId" />
+
+    <input type="number" name="UserId" placeholder="User Id" />
+    <input type="number" name="Hours" placeholder="Hours" />
+
+    <button type="submit">Book</button>
+</form>
+<div id="map" style="height:400px;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
+<script>
+    function initMap() {
+        var location = { lat: 18.5204, lng: 73.8567 };
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 10,
+            center: location
+        });
+
+        new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+
+    initMap();
+</script>

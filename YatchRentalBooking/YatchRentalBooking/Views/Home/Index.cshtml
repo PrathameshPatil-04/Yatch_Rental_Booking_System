@@ -1,8 +1,100 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- HERO SECTION -->
+<div class="container-fluid text-white text-center d-flex align-items-center"
+     style="height:90vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+     url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); background-size:cover;">
+
+    <div class="container-fluid p-0">
+
+        <h1 class="display-3 fw-bold">🚤 Yacht Rental Booking System</h1>
+
+        <p class="lead mt-3">
+            Book luxury yachts for your trips, parties, and adventures.
+        </p>
+
+        <div class="mt-4">
+            <a href="/Account/Login" class="btn btn-primary btn-lg me-3">
+                Login
+            </a>
+
+            <a href="/Account/Register" class="btn btn-success btn-lg">
+                Register
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- FEATURES SECTION -->
+<div class="container-fluid p-0">
+
+    <h2 class="text-center mb-4">Why Choose Us?</h2>
+
+    <div class="row text-center">
+
+        <div class="col-md-4" data-aos="zoom-in">
+            <div class="card shadow p-4">
+                <h4>🚤 Easy Booking</h4>
+                <p>Book your yacht in just a few clicks.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="zoom-in">
+            <div class="card shadow p-4">
+                <h4>💳 Secure Payment</h4>
+                <p>Safe and reliable payment system.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="zoom-in">
+            <div class="card shadow p-4">
+                <h4>🌍 Live Tracking</h4>
+                <p>Track your yacht location in real-time.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- 💬 TESTIMONIALS -->
+<div class="container-fluid p-0 mt-5 text-center">
+    <h2 class="mb-4">What Our Users Say</h2>
+
+    <div class="row">
+
+        <div class="col-md-4" data-aos="fade-up">
+            <div class="card p-3 shadow">
+                <p>"Amazing experience! Booking was super easy."</p>
+                <h6>- Rahul</h6>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up">
+            <div class="card p-3 shadow">
+                <p>"Best yacht service in town!"</p>
+                <h6>- Sneha</h6>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up">
+            <div class="card p-3 shadow">
+                <p>"Loved the UI and smooth booking process."</p>
+                <h6>- Amit</h6>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- CALL TO ACTION -->
+<div class="text-center mt-5 mb-5" data-aos="fade-up">
+
+    <h3>Start Your Journey Today 🌊</h3>
+
+    <a href="/Boat/Index" class="btn btn-dark btn-lg mt-3">
+        Explore Boats
+    </a>
+
 </div>

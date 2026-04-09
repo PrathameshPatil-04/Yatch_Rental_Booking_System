@@ -1,0 +1,23 @@
+﻿<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<canvas id="myChart"></canvas>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Users', 'Boats', 'Bookings'],
+            datasets: [{
+                label: 'System Data',
+                data: [10, 5, 15],
+                borderWidth: 1
+            }]
+        }
+    });
+</script>
+
+<h5>Total Users: @ViewBag.Users</h5>
+<h5>Total Boats: @ViewBag.Boats</h5>
+<h5>Total Bookings: @ViewBag.Bookings</h5>

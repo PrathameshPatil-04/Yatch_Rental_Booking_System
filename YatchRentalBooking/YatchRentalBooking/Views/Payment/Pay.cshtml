@@ -1,0 +1,28 @@
+﻿<button id="payBtn" class="btn btn-success">Pay Now</button>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+    var options = {
+        "key": "rzp_test_SbKo7vDDNwmVbm",
+        "amount": "@ViewBag.Amount * 100",
+        "currency": "INR",
+        "order_id": "@ViewBag.OrderId",
+
+        "handler": function (response) {
+
+            // 👉 call server to save booking
+            fetch('/Payment/Success?boatId=@ViewBag.BoatId&hours=@ViewBag.Hours&amount=@ViewBag.Amount')
+            .then(() => {
+                alert("Payment Successful ✅");
+                window.location = "/Booking/History";
+            });
+        }
+    };
+
+    var rzp = new Razorpay(options);
+
+    document.getElementById('payBtn').onclick = function () {
+        rzp.open();
+    }
+</script>

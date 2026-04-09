@@ -1,0 +1,18 @@
+﻿@model List<YatchRentalBooking.Models.Booking>
+
+<table class="table">
+    <tr>
+        <th>Boat</th>
+        <th>Hours</th>
+        <th>Total</th>
+    </tr>
+
+    @foreach (var b in Model)
+    {
+        <tr>
+            <td>@b.BoatId</td>
+            <td>@b.Hours</td>
+            <td>₹@b.TotalAmount</td>
+        </tr>
+    }
+</table>
